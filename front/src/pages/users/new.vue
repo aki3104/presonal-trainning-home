@@ -2,11 +2,19 @@
   <section>
     <div>
       <h1>New user</h1>
-      <form @submit.prevent="post">
-        <label for="name">Name: </label>
-        <input id="name" v-model="name" type="text" name="name" />
-        <button type="submit">submit</button>
-      </form>
+      <v-form @submit.prevent="post">
+        <v-text-field
+          v-model="name"
+          label="氏名"
+          type="text"
+          >Name:
+        </v-text-field>
+        <v-btn
+          type="submit"
+          color="info"
+          >submit
+        </v-btn>
+      </v-form>
     </div>
   </section>
 </template>
